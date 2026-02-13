@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin: 0; background: #000; color: #ff85a1; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; }
+        .box { background: #111; border: 2px solid #ff4d6d; padding: 30px; border-radius: 20px; width: 80%; }
+        button { background: #ff4d6d; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-weight: bold; margin-top: 20px; width: 100%; }
+        .letter { display: none; text-align: left; font-size: 14px; line-height: 1.5; color: white; height: 300px; overflow-y: auto; }
+        video { width: 100%; margin-top: 10px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="box" id="m">
+        <h2>Ready, Wifey? 💗</h2>
+        <button onclick="document.getElementById('m').innerHTML='<h2>Code?</h2><input id=\'p\' type=\'password\' style=\'width:80%;padding:10px;\'><button onclick=\'ck()\'>GO</button>'">OPEN</button>
+    </div>
+    <audio id="a" loop></audio>
+    <script>
+        const v=["https://cdn.discordapp.com/attachments/1471781943010918485/1471792898411593779/1.mp4","https://cdn.discordapp.com/attachments/1471781943010918485/1471792941772046366/2.mp4","https://cdn.discordapp.com/attachments/1471781943010918485/1471792996772220928/3.mp4","https://cdn.discordapp.com/attachments/1471781943010918485/1471793078216953947/4.mp4","https://cdn.discordapp.com/attachments/1471781943010918485/1471793149000286350/5.mp4","https://cdn.discordapp.com/attachments/1471781943010918485/1471794852307009588/lv_7403792730167545105_20260213112423.mp4","https://cdn.discordapp.com/attachments/1471781943010918485/1471794926470828215/7.mp4"];
+        const s=["https://cdn.discordapp.com/attachments/1471781943010918485/1471792561038561415/1_Still_With_You__Ringtone.mp3","https://cdn.discordapp.com/attachments/1471781943010918485/1471792604021653618/2_DIL_YEH_DANCER__Ringtone.mp3","https://cdn.discordapp.com/attachments/1471781943010918485/1471792666088968264/3_One_Love__Ringtone.mp3","https://cdn.discordapp.com/attachments/1471781943010918485/1471792710179622922/4_Banjara__Ringtone.mp3","https://cdn.discordapp.com/attachments/1471781943010918485/1471792726914629692/5_Kabhi_Jo_Badal_Barse__Ringtone.mp3","https://cdn.discordapp.com/attachments/1471781943010918485/1471792791335075860/6_kahy_khafa_aysy__Ringtone.mp3","https://cdn.discordapp.com/attachments/1471781943010918485/1471792817754869983/Cinnamon_Girl_7th.mp3"];
+        const t=["**Wifey**... No? 😒 You're my heartbeat.","**Billi**... No again? 😒 I love you.","**Don**... 😒 Remember 'Naan'?","**Bacha**... 🥺 I want to hold you.","**Samar ki jaan**... 💗 First day was magic.","**Savi jaan**... 💗 Your voice heals me.","**HUBBY KI WIFEY**... 💗 Always you."];
+        let c=0;
+        function ck(){if(document.getElementById('p').value==='290614'){document.getElementById('m').innerHTML='<h3>Be my Valentine?</h3><button onclick=\'st(4)\'>YES</button><button onclick=\'st(0)\'>NO</button>';}else{alert('Wrong');}}
+        function st(n){c=n;show();}
+        function show(){document.getElementById('m').innerHTML='<div class=\'letter\'>'+t[c]+'</div><video id=\'vd\' controls autoplay playsinline src=\''+v[c]+'\'></video><button onclick=\'nx()\'>NEXT</button>';document.getElementById('a').src=s[c];document.getElementById('a').play();}
+        function nx(){if(c<6){c++;show();}else{alert('I love you forever!');}}
+    </script>
+</body>
+</html>
